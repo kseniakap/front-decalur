@@ -1,0 +1,21 @@
+.block {
+	background: #f6f6f6;
+	padding: 10px 25px;
+	min-height: 30px;
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+	.question {
+		font-weight: 700;
+		cursor: pointer;
+	}
+}
+.allQuestion {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}

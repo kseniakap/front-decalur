@@ -1,0 +1,13 @@
+.head{
+    position: relative;
+    button{
+        margin-bottom: 10px;
+        
+    }
+}
+.reviews{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}

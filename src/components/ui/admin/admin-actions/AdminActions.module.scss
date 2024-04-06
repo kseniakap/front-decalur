@@ -1,0 +1,33 @@
+.actions {
+	display: flex;
+	justify-content: end;
+	gap: 7px;
+}
+.btns {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+
+	button {
+		background-color: #00cc66;
+		color: white;
+		&:nth-child(1) {
+			background-color: #cc0000;
+		}
+		&:nth-child(1):hover {
+			background-color: white;
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.actions {
+		display: flex;
+		justify-content: end;
+		gap: 1px;
+	}
+}
+@media (max-width: 993px) {
+	.actions {
+		width: 100px;
+	}
+}

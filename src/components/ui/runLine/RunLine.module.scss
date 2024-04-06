@@ -1,0 +1,35 @@
+.line {
+	margin-top: 10px;
+	border: 1px solid black;
+	max-width: 100%;
+	overflow-x: hidden;
+	padding: 10px;
+	font-size: 22px;
+	div {
+		width: 200%;
+		display: flex;
+
+		animation: lineLeft 9s linear infinite;
+	}
+	h3 {
+		white-space: nowrap;
+		width: 100%;
+	}
+	a {
+		color: var(--accent-color);
+		transition: var(--transiton-text);
+		cursor: pointer;
+		&:hover {
+			color: var(--secondary-color);
+		}
+	}
+}
+
+@keyframes lineLeft {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}

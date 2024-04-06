@@ -1,0 +1,40 @@
+.advantages {
+	padding: 50px 0;
+	position: relative;
+	height: 800px;
+	width: 100%;
+	background-color: var(--secondary-color);
+	position: relative;
+	.img {
+		background:
+			linear-gradient(
+				to right,
+				var(--secondary-color) 0%,
+				#eef calc(27% - 160px),
+				transparent calc(50% - 30px),
+				transparent 100%,
+				#eef calc(50% + 160px),
+				#eee 100%
+			),
+			url('/images/advantages_decalur.webp') no-repeat top center;
+		width: 60%;
+		height: 800px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		filter: grayscale(0.9);
+	}
+	h2 {
+		margin-bottom: 70px;
+	}
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+}
+@media (max-width: 576px) {
+	.advantages h2 {
+		margin-bottom: 30px;
+	}
+}

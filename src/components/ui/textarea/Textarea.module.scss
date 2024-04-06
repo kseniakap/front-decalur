@@ -1,0 +1,31 @@
+.area {
+	margin-bottom: 10px;
+	label {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		position: relative;
+		span {
+			font-weight: 500;
+			font-size: 14px;
+			position: absolute;
+			top: -15px;
+			left: 10px;
+			background-color: #fff;
+			padding: 4px 10px;
+		}
+		textarea {
+			min-height: 150px;
+			padding: 15px;
+			border: none;
+			outline: none;
+			border: 1px solid var(--secondary-color);
+			border-radius: 5px;
+			background-color: #fff;
+			&:focus,
+			&.active {
+				background-color: #fff;
+			}
+		}
+	}
+}

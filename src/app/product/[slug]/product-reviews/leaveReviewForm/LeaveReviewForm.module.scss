@@ -1,0 +1,22 @@
+.block{
+    display: block;
+    flex-wrap: wrap;
+    gap: 10px;
+    textarea{
+        width: 100%;
+        min-height: 100px;
+        margin: 10px 0;
+        outline: none;
+        padding: 10px;
+    }
+    .btn{
+        margin-top: 10px;
+        
+    }
+    .allErrors{
+        font-size: 14px;
+    }
+}
+.publish{
+    text-align: center;
+}

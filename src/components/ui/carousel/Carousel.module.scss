@@ -1,0 +1,247 @@
+.carousel {
+	margin-bottom: 30px;
+	position: relative;
+	.transition {
+		position: relative;
+		min-height: 540px;
+		background: rgb(255, 255, 255);
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(205, 205, 205, 1) 100%
+		);
+	}
+}
+
+.item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	.content {
+		margin-left: auto;
+		max-width: 550px;
+		padding: 60px 0px 0 70px;
+		position: relative;
+		background: rgb(255, 255, 255);
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(205, 205, 205, 1) 100%
+		);
+		// background-color: var(--secondary-color);
+		h2 {
+			font-size: 40px;
+			width: 90%;
+			font-weight: 600;
+			line-height: 1.05;
+			font-family: 'Nunito', sans-serif;
+			text-align: center;
+			padding: 10px;
+			position: relative;
+			display: table;
+			z-index: 100;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -25px;
+				width: 50px;
+				height: 30px;
+				border-top: 5px solid var(--accent-color);
+				border-left: 5px solid var(--accent-color);
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: -25px;
+				width: 50px;
+				height: 30px;
+				border-bottom: 5px solid var(--accent-color);
+				border-right: 5px solid var(--accent-color);
+			}
+		}
+		p {
+			font-size: 20px;
+			font-weight: 500;
+			font-family: 'Nunito', sans-serif;
+			width: 90%;
+			margin-bottom: 40px;
+		}
+		a {
+			padding: 15px 25px;
+			background-color: var(--accent-color);
+			color: #fff;
+
+			border-radius: 3px;
+			transition: var(--transiton-hover);
+			&:hover {
+				background-color: #f0f0f4;
+				color: black;
+			}
+		}
+	}
+	img {
+		height: 540px;
+		width: 100%;
+		object-fit: cover;
+	}
+	h2 {
+		margin-bottom: 20px;
+		animation: slideFromTop 0.6s linear;
+		top: 0;
+	}
+	p {
+		animation: slideFromTop 0.9s linear;
+	}
+	a {
+		animation: slideFromTop 1s linear;
+	}
+}
+
+.nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+	cursor: pointer;
+	button {
+		background-color: transparent;
+		outline: none;
+		border: none;
+	}
+}
+
+.item-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+.item-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition:
+		opacity 300ms,
+		transform 300ms;
+}
+.item-exit {
+	opacity: 1;
+}
+.item-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition:
+		opacity 300ms,
+		transform 300ms;
+}
+
+@keyframes slideFromLeft {
+	from {
+		transform: translateY(-200px);
+		opacity: 0.2;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideFromTop {
+	from {
+		transform: translateY(100%);
+		opacity: 0.2;
+	}
+	to {
+		transform: translateX(0);
+		// opacity: 1;
+	}
+}
+@media (max-width: 993px) {
+	.item {
+		display: flex;
+		flex-direction: column;
+		img {
+			height: 360px;
+			order: 1;
+		}
+		.content {
+			padding: 30px 0 30px 0;
+			max-width: 700px;
+			margin: 0 auto;
+			order: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 300px;
+			text-align: center;
+			a {
+				margin: 0;
+			}
+
+			p {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.carousel .transition {
+		min-height: 670px;
+	}
+}
+@media (max-width: 768px) {
+	.item .content {
+		text-align: center;
+		h2 {
+			font-size: 32px;
+			margin: 0 auto 10px;
+		}
+		p {
+			font-size: 18px;
+			margin: 0 auto 15px;
+		}
+		a {
+			margin-bottom: 0;
+		}
+	}
+	.carousel {
+		height: 670px;
+		.transition {
+			min-height: 100%;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.item {
+		img {
+			height: 215px;
+		}
+		.content {
+			height: 100%;
+			h2 {
+				font-size: 25px;
+				&:before {
+					left: -5px;
+				}
+				&:after {
+					right: -5px;
+				}
+			}
+		}
+	}
+	.carousel {
+		height: 540px;
+		.transition {
+			min-height: 100%;
+		}
+	}
+}

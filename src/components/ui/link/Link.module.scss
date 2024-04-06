@@ -1,0 +1,14 @@
+.link {
+    display: inline-block;
+	padding: 15px 25px;
+	background-color: black;
+	color: #fff!important;
+	border-radius: 3px;
+	transition: var(--transiton-hover);
+	margin-bottom: 100px;
+	margin-bottom: 0;
+	&:hover {
+		background-color: #f0f0f4;
+		color: black!important;
+	}
+}

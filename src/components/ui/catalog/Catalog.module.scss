@@ -1,0 +1,15 @@
+.allGoods {
+	display: flex;
+	justify-content: start;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+.notExist {
+	margin-bottom: 10px;
+}
+@media (max-width: 993px) {
+	.allGoods {
+		justify-content: center;
+	}
+}

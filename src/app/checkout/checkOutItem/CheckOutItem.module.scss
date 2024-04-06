@@ -1,0 +1,29 @@
+.item {
+	padding: 15px 10px;
+	display: grid;
+	grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+	align-items: center;
+	border-bottom: 1px solid var(--secondary-color);
+	text-align: center;
+	img {
+		width: 120px;
+		height: 120px;
+		object-fit: cover;
+	}
+}
+@media (max-width: 576px) {
+	.item {
+		display: flex;
+		flex-direction: column;
+		img {
+			margin-bottom: 10px;
+			width: 100px;
+			height: 80px;
+		}
+
+		.name {
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+	}
+}

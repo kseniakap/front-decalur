@@ -1,0 +1,33 @@
+.catalog {
+	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	gap: 30px;
+}
+
+.wrapper {
+	opacity: 0;
+	animation: ani 2.5s forwards;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@media (max-width: 1200px) {
+	.catalog {
+		gap: 20px;
+	}
+}
+@media (max-width: 993px) {
+	.catalog {
+		display: block;
+		.wrapper {
+			margin-top: 10px;
+		}
+	}
+}

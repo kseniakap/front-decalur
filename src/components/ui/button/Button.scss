@@ -1,0 +1,19 @@
+.btn {
+	font-size: 14px;
+	transition: var(--transiton-hover);
+	&-gray {
+		background-color: var(--secondary-color);
+		color: black;
+	}
+	&-blue {
+		background-color: var(--accent-color);
+		color: white;
+		&:hover {
+			background-color: var(--secondary-color);
+			color: black;
+		}
+	}
+	&-lg {
+		padding: 15px 30px;
+	}
+}

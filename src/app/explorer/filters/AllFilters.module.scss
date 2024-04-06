@@ -1,0 +1,41 @@
+.top {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 0;
+	cursor: pointer;
+	p {
+		font-weight: 500;
+	}
+}
+
+.bottom {
+	display: block;
+	flex-wrap: wrap;
+	min-height: 20px;
+    margin-bottom: 20px;
+	max-width: 500px;
+	animation: slideRight 0.5s forwards;
+}
+.categoryGroup {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(10px);
+		opacity: 1;
+	}
+}
+@media (max-width: 576px) {
+	.bottom {
+		max-width: 300px;
+	}
+}

@@ -1,0 +1,47 @@
+.menu {
+	background-color: var(--secondary-color);
+	border-radius: 3px;
+	min-height: 125px;
+	width: 100%;
+	padding: 20px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	ul {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 0;
+		margin-bottom: 5px;
+		a {
+			padding: 10px;
+			border-radius: 3px;
+			transition: 0.2s all ease-in;
+			display: flex;
+			align-items: center;
+			gap: 3px;
+			span {
+				display: block;
+				margin-left: 10px;
+			}
+			&:hover {
+				background-color: #fff;
+			}
+		}
+	}
+	.exit {
+		display: block;
+		width: 100%;
+		border-radius: 3px;
+		padding: 10px 20px;
+		background-color: #fff;
+		font-weight: 600;
+	}
+}
+
+@media (max-width: 1200px) {
+	// .menu {
+	// 	width: 180px;
+	// }
+}

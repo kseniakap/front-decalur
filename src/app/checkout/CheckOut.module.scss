@@ -1,0 +1,134 @@
+.checkout {
+	padding-top: 30px;
+	display: grid;
+	gap: 200px;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	margin-bottom: 50px;
+	.list {
+		.content {
+			max-height: 610px;
+			overflow-y: auto;
+			padding-right: 20px;
+		}
+		.content::-webkit-scrollbar-track {
+			border: 1px solid var(--accent-color);
+			background-color: #fff;
+			border-radius: 5px;
+		}
+		.content::-webkit-scrollbar {
+			width: 5px;
+			border-radius: 5px;
+		}
+
+		.content::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: var(--accent-color);
+		}
+	}
+	.right {
+		.form {
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			border-radius: 3px;
+			min-height: 300px;
+			padding: 30px 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-bottom: 20px;
+			h1 {
+				margin-bottom: 0;
+			}
+			p {
+				font-size: 14px;
+				padding-top: 10px;
+				border-top: 1px solid var(--secondary-color);
+				margin-bottom: 5px;
+				color: var(--secondary-color);
+			}
+			input {
+				padding: 15px;
+				border: none;
+				outline: none;
+				border: 1px solid var(--secondary-color);
+				border-radius: 5px;
+				background-color: #fff;
+			}
+		}
+		fieldset {
+			legend {
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+			div {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				gap: 5px;
+				input {
+					width: 48%;
+				}
+			}
+		}
+	}
+	.footer {
+		.total {
+			margin-bottom: 10px;
+			p {
+				font-weight: 500;
+				font-size: 20px;
+				margin-bottom: 5px;
+			}
+		}
+		button {
+			margin-bottom: 10px;
+		}
+		label {
+			font-size: 14px;
+			color: var(--secondary-color);
+		}
+	}
+}
+.texareaInfo {
+	width: 100%;
+	height: 200px;
+	padding: 5px;
+	&::-webkit-scrollbar-track {
+		border: 1px solid var(--accent-color);
+		background-color: #fff;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background-color: var(--accent-color);
+		border: 1px solid var(--accent-color);
+	}
+}
+@media (max-width: 1200px) {
+	.checkout {
+		gap: 80px;
+	}
+}
+@media (max-width: 993px) {
+	.checkout {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		.list {
+			order: 2;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.checkout {
+		.right .form input {
+			padding: 5px 10px;
+			font-size: 14px;
+		}
+	}
+}

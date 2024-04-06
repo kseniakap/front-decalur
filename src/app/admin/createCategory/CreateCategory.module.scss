@@ -1,0 +1,31 @@
+.createCategory {
+	margin-bottom: 50px;
+	.form {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		gap: 20px;
+		input[type='text'],
+		input[type='number'] {
+			border: none;
+			outline: none;
+			border-bottom: 1px solid var(--secondary-color);
+			padding: 5px 10px;
+		}
+		textarea {
+			height: 300px;
+			padding: 5px;
+			border: none;
+			outline: none;
+			border: 1px solid var(--secondary-color);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.createCategory {
+		.form {
+			width: 100%;
+		}
+	}
+}

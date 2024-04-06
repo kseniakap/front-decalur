@@ -1,0 +1,61 @@
+.select {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	.top {
+		border: 1.5px solid #d7d9df;
+		padding: 8px 15px;
+		width: 100%;
+		z-index: 200;
+		position: absolute;
+	}
+	ul {
+		position: absolute;
+		z-index: 100;
+		top: -4px;
+		text-align: center;
+		width: 100%;
+		padding-left: 0;
+	}
+	li {
+		transform: translateX(-100%);
+		border: 1px solid var(--secondary-color);
+		background-color: #fff;
+		padding: 10px 15px;
+		opacity: 0;
+		animation: slideTop 0.5s forwards;
+		transition: all 0.3s ease-in;
+		&:hover:not(&.active) {
+			background-color: var(--secondary-color);
+		}
+		&.active {
+			background-color: gray;
+			color: white;
+		}
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}) {
+				animation-delay: 0.5s * $i;
+			}
+		}
+	}
+}
+
+@keyframes slideTop {
+	0% {
+		transform: translateY(0%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(100%);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 576px) {
+	.select {
+		position: relative;
+		height: 50px;
+	}
+}

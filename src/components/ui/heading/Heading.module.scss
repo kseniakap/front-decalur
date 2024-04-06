@@ -1,0 +1,13 @@
+.heading {
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.1;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+	.heading {
+		margin-bottom: 15px;
+	}
+}

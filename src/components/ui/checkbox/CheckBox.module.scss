@@ -1,0 +1,14 @@
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	.notChecked {
+		width: 10px;
+		height: 10px;
+		border: 1px solid gray;
+	}
+	.active {
+		background-color: var(--accent-color);
+		border: 1px solid var(--accent-color);
+	}
+}

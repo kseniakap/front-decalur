@@ -1,0 +1,14 @@
+.link{
+	display: block;
+	width: max-content;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-radius: 3px;
+	border: 1px solid var(--secondary-color);
+	margin-bottom: 20px;
+	transition: 0.3s all ease-in;
+	cursor: pointer;
+	&:hover {
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+}

@@ -1,0 +1,9 @@
+.footer {
+	min-height: 200px;
+	margin-top: 50px;
+}
+@media (max-width: 576px) {
+	.footer {
+		margin-bottom: 30px;
+	}
+}
