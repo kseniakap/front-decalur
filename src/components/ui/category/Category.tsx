@@ -54,7 +54,7 @@ const Category:FC = () => {
                 const isActive  = item.id === activeIndex;
                 return ( 
                   <HoverImg key={item.id} 
-                  url={item.images} 
+                  url={`${process.env.SERVER_UPLOADS}/${item.images}`}
                   active={isActive}/>)
               })
             }
@@ -71,7 +71,7 @@ const Category:FC = () => {
                         <div className={st.content}>
                           { 
                             category.images && (
-                            <img src={category.images} alt="Картинка в категории"/>)
+                            <img src={`${process.env.SERVER_UPLOADS}/${category.images}`} alt="Картинка в категории"/>)
                           }
                           <h3>{category.name}</h3>
                         </div>
