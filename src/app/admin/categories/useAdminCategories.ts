@@ -13,7 +13,7 @@ export const useAdminAllCategories = ()=>{
                 items:[
                     category.name, 
                 ],
-                image: category.images,
+                image: `${process.env.SERVER_UPLOADS}/${category.images}`,
             }
         })
     })
