@@ -34,10 +34,6 @@ const Auth: FC = ()=>{
         <img src={type === "Авторизация" ? "images/authImgDecalur.png" : "images/registerImgDecalur.png"} alt="картинка в авторизации и регистрации" className={st.img}/>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Heading>{type}</Heading>
-          {
-            isLoading && ( 
-              <p>Загрузка...</p>)
-          }
           <Field {...formRegister("email", {
             required:"Email обязателен",   
             pattern:{
@@ -58,6 +54,10 @@ const Auth: FC = ()=>{
           placeholder="Пароль"
           error={errors.password?.message}/>
           { type === "Авторизация"  && status && <p>{status}</p>}
+          {
+            isLoading && ( 
+              <p style={{margin: "5px 0"}}>Загрузка...</p>)
+          }
           <Button size="medium" variant="blue" className="btn-lg">Войти</Button>
         </form>
         <button type="button" className="" onClick={()=>setType(type === "Авторизация" ? "Регистрация" : "Авторизация")}>
