@@ -26,9 +26,9 @@ const Home: FC<TypePaginationProducts> = ({products}) => {
           <CatalogSlider title ="Новый товар" products={products || []}  />
       </MainContainer>   
       <Advantages/>
-      {/* <MainContainer>
+      <MainContainer>
           <CatalogSlider title ="Акции" products={products || []}  />
-      </MainContainer>  */}
+      </MainContainer> 
       <Footer/> 
     </>
   )

@@ -4,7 +4,7 @@ import { IReviewFields } from '../review-fields.interface'
 import { useMutation, useQueryClient } from 'react-query'
 import { ReviewService } from '@/services/review.service'
 import Heading from '@/ui/heading/Heading'
-import { Spinner } from 'react-bootstrap'
+import Spinner from 'react-bootstrap/Spinner'
 import { Rating } from 'react-simple-star-rating'
 import Button from '@/ui/button/Button'
 import st from "./LeaveReviewForm.module.scss"
@@ -35,7 +35,7 @@ const LeaveReviewForm:FC<{productId:number}>= ({productId}) => {
                 <Heading>Отставить отзыв</Heading>
                 {
                     isLoading ? (
-                        <Spinner/>
+                        <Spinner/> 
                     ) : (
                         <div className={st.block}>
                            <div>
