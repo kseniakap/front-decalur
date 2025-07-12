@@ -13,25 +13,25 @@ import Advantages from "@/components/advantages/Advantages";
 import "./../assets/styles/style.scss"
 
 
-const Home: FC<TypePaginationProducts> = ({products}) => {
-  return (
-    <>
-      <MainContainer>
-        <Header/>
-      </MainContainer>
-        <Carousel items={carouselItems} />
-      <MainContainer>
-          <Search/>
-          <Category/>
-          <CatalogSlider title ="Новый товар" products={products || []}  />
-      </MainContainer>   
-      <Advantages/>
-      <MainContainer>
-          <CatalogSlider title ="Акции" products={products || []}  />
-      </MainContainer> 
-      <Footer/> 
-    </>
-  )
+const Home: FC<TypePaginationProducts> = ({ products, discountProducts }) => {
+	return (
+		<>
+			<MainContainer>
+				<Header />
+			</MainContainer>
+			<Carousel items={carouselItems} />
+			<MainContainer>
+				<Search />
+				<Category />
+				<CatalogSlider title='Новый товар' products={products || []} />
+			</MainContainer>
+			<Advantages />
+			<MainContainer>
+				<CatalogSlider title='Акции' products={discountProducts || []} />
+			</MainContainer>
+			<Footer />
+		</>
+	)
 }
 
 export default Home

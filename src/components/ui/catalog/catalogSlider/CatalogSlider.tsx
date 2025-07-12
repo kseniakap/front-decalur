@@ -37,6 +37,7 @@ const responsive = {
 
 //Каталог для главной страницы (слайдер)
 const CatalogSlider: FC<ICatalog> = ({ products, isLoading, title }) => {
+	console.log('products', products)
 	if (isLoading) return <Spinner />
 	return (
 		<section className={st.catalog}>
